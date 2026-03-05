@@ -5,6 +5,7 @@ using UnityEngine;
 /// </summary>
 public class MergeController : MonoBehaviour
 {
+   
     // Nivel de merge de este objeto (1, 2, 3 o 4)
     public int mergeLevel = 1;
 
@@ -13,6 +14,15 @@ public class MergeController : MonoBehaviour
 
     // Variable para evitar que un mismo objeto se fusione dos veces
     private bool hasMerged = false;
+
+    public Transform mergeposition;
+
+    public UIManager inventory;
+
+    private void Start()
+    {
+        inventory = GameObject.Find("UIManager").GetComponent<UIManager>();
+    }
 
     // Se ejecuta cuando este objeto colisiona con otro
     private void OnCollisionEnter(Collision collision)
@@ -40,12 +50,14 @@ public class MergeController : MonoBehaviour
                         // Si hay un prefab de siguiente nivel, lo instanciamos en la posición de este objeto
                         if (nextLevelPrefab != null)
                         {
-                            Instantiate(nextLevelPrefab, Vector3.zero, Quaternion.identity);
+                            Instantiate(nextLevelPrefab,mergeposition.position, Quaternion.identity);
                         }
 
                         // Destruimos ambos objetos originales
+                        inventory.AddMerge(1);
                         Destroy(otherMerge.gameObject);
                         Destroy(gameObject);
+                        
                     }
                 }
             }

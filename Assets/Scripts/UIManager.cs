@@ -15,9 +15,11 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Método público que incrementa el contador de fusiones y actualiza el texto
     /// </summary>
-    public void AddMerge()
+    public void AddMerge(int mergeToAdd)
     {
+        
+        mergeCount += mergeToAdd;
+        mergeCountText.text = mergeToAdd.ToString();
         mergeCountText.text = "Merges: " + mergeCount;
-        mergeCount++;
     }
 }
