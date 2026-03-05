@@ -127,4 +127,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MergeController
   mergeLevel: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 8439104862564507740, guid: c10779e26e939a24ebb025f05c9ddd81, type: 3}

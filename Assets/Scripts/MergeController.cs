@@ -22,7 +22,7 @@ public class MergeController : MonoBehaviour
         {
 
             // Comprobamos que el otro objeto es un objeto mergeable
-            if (collision.gameObject.CompareTag("Mergable"))
+            if (collision.gameObject.CompareTag("Mergeable"))
             {
                 // Obtenemos el componente MergeController del otro objeto
                 MergeController otherMerge = collision.gameObject.GetComponent<MergeController>();

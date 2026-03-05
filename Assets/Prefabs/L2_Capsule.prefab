@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 798999298302141342}
   - component: {fileID: 8446947791488786517}
   - component: {fileID: 878694604184017693}
+  - component: {fileID: -3336573189533941247}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: L2_Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,3 +114,17 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3336573189533941247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439104862564507740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8128f00fabbd8934dbc937985b943d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MergeController
+  mergeLevel: 1
+  nextLevelPrefab: {fileID: 0}
